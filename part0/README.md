@@ -1,4 +1,4 @@
-# part0
+# part 0
 
 ## 0.4: new note
 The following sequence diagram depicts the situation where the user creates a new note on page https://fullstack-exampleapp.herokuapp.com/notes by writing something into the text field and clicking the submit button as follows:
