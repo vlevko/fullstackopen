@@ -1,0 +1,8 @@
+POST https://frozen-basin-42982.herokuapp.com/api/persons
+Content-Type: application/json
+# POST http://localhost:3001/api/persons
+
+{
+    "name": "Asto Marti",
+    "number": "35-73-6245850"
+}

@@ -1,0 +1,2 @@
+# GET http://localhost:3001/api/persons/5d8506af1fc1492794dc404c
+GET https://frozen-basin-42982.herokuapp.com/api/persons/1

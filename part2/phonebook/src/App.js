@@ -91,9 +91,6 @@ const App = () => {
 
   const addPerson = (event) => {
     event.preventDefault();
-    if (!newName) {
-      return;
-    }
 
     if (persons.some(person => person.name.toLowerCase() === newName.toLowerCase())) {
       if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)) {
@@ -142,6 +139,15 @@ const App = () => {
           setNewFilter('');
           setNotificationMessage(`Added ${returnedPerson.name}`);
           setNotificationClass('success');
+          setTimeout(() => {
+            setNotificationMessage(null);
+            setNotificationClass(null);
+          }, 5000);
+        })
+        .catch(error => {
+          console.log(error.response.data)
+          setNotificationMessage(error.response.data.error);
+          setNotificationClass('error');
           setTimeout(() => {
             setNotificationMessage(null);
             setNotificationClass(null);
